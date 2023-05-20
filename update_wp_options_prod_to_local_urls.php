@@ -1,10 +1,6 @@
 <?php
 
-// WordPress database credentials (you may have to update port number if not connecting properly)
-// define('DB_NAME', 'wordpress');
-// define('DB_USER', 'wordpress');
-define('DB_PASSWORD', 'wordpress');
-// define('DB_HOST', '127.0.0.1:52005');
+// From & To URL variables & WordPress database credentials
 $from = null;
 $to = null;
 $db_name = null;
@@ -35,6 +31,7 @@ if ($argc > 1) {
     }
     // Use the values as needed
     if ($from !== null && $to !== null && $db_name !== null && $db_user !== null && $db_password !== null && $db_host !== null && $db_port !== null) {
+        echo "Update script working...";
         // Connect to the database
         $db_host_port = $db_host . ":" . $db_port;
         $mysqli = new mysqli($db_host_port, $db_user, $db_password, $db_name);
