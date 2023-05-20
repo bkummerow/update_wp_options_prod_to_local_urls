@@ -31,7 +31,6 @@ if ($argc > 1) {
     }
     // Use the values as needed
     if ($from !== null && $to !== null && $db_name !== null && $db_user !== null && $db_password !== null && $db_host !== null && $db_port !== null) {
-        echo "Update script working...";
         // Connect to the database
         $db_host_port = $db_host . ":" . $db_port;
         $mysqli = new mysqli($db_host_port, $db_user, $db_password, $db_name);
