@@ -44,9 +44,9 @@ if ($argc > 1) {
         $query = "UPDATE wp_options SET option_value = REPLACE(option_value, '" . $from . "', '" . $to . "')";
         // Execute the update query
         if ($mysqli->query($query) === TRUE && $from !== null && $to !== null) {
-            echo "Update completed successfully.";
+            echo -e "Update completed successfully.\n";
         } else {
-            echo "Error updating database: " . $mysqli->error;
+            echo -e "Error updating database: " . $mysqli->error;
         }
 
         if ($from === 'asureti.com') {
@@ -57,7 +57,7 @@ if ($argc > 1) {
 
             // Execute the update query
             if ($mysqli->query($theme_mod_query) === TRUE) {
-                echo "Update completed successfully.";
+                echo -e "Update completed successfully.\n";
             } else {
                 echo "Error updating database: " . $mysqli->error;
             }
